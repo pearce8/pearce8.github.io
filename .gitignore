@@ -1,0 +1,15 @@
+*~
+*.texshop
+*.xcf
+*.log
+*.bbl
+*.aux
+*.blg
+*.gz
+*.out
+*.ps
+*.dvi
+*.sw*
+*.synctex.gz*
+Gimenez-SC2014.pdf
+lazy_lb_main.pdf
