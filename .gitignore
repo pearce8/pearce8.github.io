@@ -1,4 +1,5 @@
 *~
+_site/
 *.texshop
 *.xcf
 *.log
@@ -11,5 +12,4 @@
 *.dvi
 *.sw*
 *.synctex.gz*
-Gimenez-SC2014.pdf
-lazy_lb_main.pdf
+
