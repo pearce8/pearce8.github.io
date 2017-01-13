@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+    <title>Olga Pearce &mdash; {{ page.title }}</title>
     <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
-    <div class="container">
-
+    <div id='wrap'>
+      <div id='header'>
+        <a href='http://buildr.apache.org/' title="The build system that doesn't suck"><img alt='buildr' src='images/buildr.png'></a>
+        <div class='tagline'>The build system that doesn't suck</div>
+      </div>
+      <div id='pages'>
+        <ol class='toc'>
+          <li>Olga Pearce
+             <ol class="toc">
+               <li><a href="/">Home</a></li>
+               <li><a href="/about">About</a></li>
+               <li><a href="/cv">CV</a></li>
+               <li><a href="/blog">Blog</a></li>
+             </ol>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
+        {{ content | toc }}
         {{ content }}
-
-      </div><!-- /.container -->
-    <footer>
-      <ul>
-        <li><a href="mailto:pearce8@llnl.gov">email</a></li>
-        <li><a href="https://pearce8.github.io">pearce8.github.io</a></li>
+      </div>
+      <div id='footer'>
+        <ul>
+          <li><a href="mailto:pearce8@llnl.gov">email</a></li>
+          <li><a href="https://pearce8.github.io">pearce8.github.io</a></li>
         </ul>
-      </footer>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
-
 
