@@ -1,2 +1,60 @@
-name: Olga Pearce, Computer Scientist
-markdown: kramdown
+# Site wide configuration
+
+title:            pearce8.github.io
+locale:           en_US
+#url:              http://localhost:4000
+url:              https://pearce8.github.io
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+
+# Site owner
+owner:
+  name: Olga Pearce
+  avatar: #me-grand-canyon.jpg
+  bio: "Computer Scientist<br/> <a href=\"http://people.llnl.gov/pearce8\">Lawrence Livermore National Laboratory</a>"
+  email: pearce8@llnl.gov
+  disqus-shortname: pearce8
+  twitter: pearce8
+  facebook: #pearce8
+  google:
+    plus: #OlgaPearce
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: pearce8
+  stackoverflow: #
+  linkedin: #pearce8
+  hackernews: #
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  scholar: OlgaPearce
+  llnl: #pearce8
+
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
