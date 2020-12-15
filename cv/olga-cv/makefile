@@ -1,4 +1,5 @@
 pdflatex olga-cv.tex
+bibtex Selected
 bibtex Paper
 bibtex Workshop
 bibtex PhD

@@ -87,8 +87,8 @@
 % Multiple Bibliographies and their titles.
 \usepackage{multibib}
 \usepackage{multibib}
-%\newcites{Paper,Workshop,Poster}{Refereed Publications in Conferences and Journals, Unrefereed Publications and Technical Reports, Posters and Presentations}
-\newcites{Paper,Workshop,PhD,Poster}{Refereed Publications in Conferences and Journals, Unrefereed Publications and Technical Reports, Ph.D. Dissertation, Posters and Presentations}
+%\newcites{Paper,Workshop,PhD,Poster}{Refereed Publications in Conferences and Journals, Unrefereed Publications and Technical Reports, Ph.D. Dissertation, Posters and Presentations}
+\newcites{Selected,Paper,Workshop,PhD,Poster}{Selected Refereed Publications, Refereed Publications in Conferences and Journals (additional), Unrefereed Publications and Technical Reports, Ph.D. Dissertation, Posters and Presentations}
 %%%%%\newcommand{\paperSecTitle}   {\bibsectiontitleformat{Conference \& Journal Papers}}
 %%%%%\newcommand{\workshopSecTitle}{\bibsectiontitleformat{Workshops \& Technical Reports}}
 %%%%%%\newcommand{\bookSecTitle}    {\bibsectiontitleformat{Book Chapters \& Articles}}
@@ -108,11 +108,11 @@
 \vspace{-3em}    % Omit if quote is included
 \input{Sections/research_interests}
 \input{Sections/education}
-\input{Sections/awards}
 \input{Sections/research-experience}
 \input{Sections/professional-activities}
-\input{Sections/university-activities}
 \input{Sections/teaching}
+\input{Sections/awards}
+\input{Sections/university-activities}
 \input{Sections/professional-experience}
 \input{Sections/skills}
 %\input{Sections/software}
@@ -121,7 +121,11 @@
 %            Publications
 %----------------------------------------------------------------------------------
 \section{Publications}
-	\nocitePaper{*}
+	\nociteSelected{*}
+	\bibliographystyleSelected{plain-url-inline-revchron}
+	\bibliographySelected{Bibliographies/Selected}
+
+    \nocitePaper{*}
 	\bibliographystylePaper{plain-url-inline-revchron}
 	\bibliographyPaper{Bibliographies/Papers}
 
@@ -151,16 +155,3 @@
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
