@@ -1,5 +1,93 @@
-\documentclass[11pt]{article}
+%!TEX TS-program = multibib
+\documentclass[10pt,letterpaper]{moderncv/moderncv}
+\usepackage{wrapfig}
+
+%----------------------------------------------------------------------------------
+% moderncv Setup
+%----------------------------------------------------------------------------------
+\moderncvstyle{classic}                      % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{purple}                         % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage[utf8]{inputenc}                  % replace by the encoding you are using
+%\renewcommand{\familydefault}{\sfdefault}   % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%----------------------------------------------------------------------------------
+% Geometry and margins.
+%----------------------------------------------------------------------------------
+\usepackage[scale=0.8,top=1in,bottom=.75in]{geometry}
+\setlength{\hintscolumnwidth}{2.8cm}                         % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, - to change width of name placeholder (to leave more space for your address details)
+\AtBeginDocument{\recomputelengths}                      % required when changes are made to page layout lengths
+
+%----------------------------------------------------------------------------------
+% Set up hyperref custom link colors.
+%----------------------------------------------------------------------------------
+%\usepackage{hyperref}
+\usepackage{xcolor}                          % Use xcolor so I can steal colors from moderncv
+\colorlet{mylinkcolor}{color1!80!black}      % Links are slightly darker than color1
+%\hypersetup{
+%    colorlinks=true,%
+%    citecolor=black,%
+%    filecolor=black,%
+%    linkcolor=mylinkcolor,%
+%    urlcolor=mylinkcolor,%
+%    pdfborder=0 0 0%
+%}
+\urlstyle{sf}    % Make URLs match rest of text.
+
+%----------------------------------------------------------------------------------
+% Personal data.
+%----------------------------------------------------------------------------------
+\firstname{Olga}
+\familyname{Pearce}
+%\title{Resum\u00E9 title (optional)}                       % optional
+
+%%%%%%%%% LLNL address
+\address{Lawrence Livermore National Laboratory}{Livermore, CA, 94550}    % optional
+%\phone{925.422.0436}                                   % optional
+%\fax{fax (optional)}                                  % optional
+\email{olga@llnl.gov}                             % optional
+\extrainfo{\href{http://people.llnl.gov/olga}{\url{http://people.llnl.gov/olga}}}
+
+%%%%%%%%%%%% TAMU address
+%\address{Parasol Lab, Dept. of Computer Science and Engineering\\Texas A\&M University,}{College Station, TX 77843-3112}
+%%\phone{925.422.0436}                                   % optional
+%%\fax{fax (optional)}                                  % optional
+%\email{olga@cs.tamu.edu}                             % optional
+%\extrainfo{\href{http://parasol.tamu.edu/people/olga}{\url{http://parasol.tamu.edu/people/olga}}}
+%%%%\quote{Some quote (optional)}                         % optional
+%%%%\photo[64pt]{picture}                                 % optional, '64pt' is the height the picture must be resized to and
+%                                                       %'picture' is the name of the picture file
+
+%----------------------------------------------------------------------------------
+% Custom commands.
+%----------------------------------------------------------------------------------
+% command and color used in this document, independently from moderncv
+\definecolor{see}{rgb}{0.5,0.5,0.5}% for web links
+\newcommand{\see}[1]{\hfill{\itshape\color{see}\footnotesize{}see #1}}
+
+%----------------------------------------------------------------------------------
+% Bibliography Customizations.
+%----------------------------------------------------------------------------------
+% Put labels next to best posters, based on bibliography order.
+% NOTE: this is a little nasty; numbers need to be updated every time the pubs change.
+\makeatletter
+\renewcommand{\bibliographyitemlabel}{
+    \ifthenelse{\value{enumiv}=160\or%
+                \value{enumiv}=150}{\color{color1}\textbf{Best Poster} \color{black}}{}
+    {\@biblabel{\arabic{enumiv}}}%
+}
+\makeatother
+
+
+
 \begin{document}
+\recipient{\large Diversity Statement}{Olga Pearce, Ph.D.}
+\date{January 20, 2021}
+\opening{}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle%\justifying
+\vspace{-.75cm}
 
 Walking into my first Computer Science course in college and being asked if I am lost
 was one of the jarring experiences that could have deterred a younger me from pursuing my passion.
@@ -24,9 +112,9 @@ being available for career questions, as well as mentoring, can help many female
 
 In my work with students as TAMU, I would like to pursue the following objectives:
 \begin{enumerate}
-\item {\bf develop new talent:} help attract, retain, and motivate a diverse set of students with talent and skills necessary to learn and advance the cutting edge research in computer science;
-\item {\bf motivate the team:} support my students and research team in setting and meeting high academic objectives;
-\item {\bf model personal excellence:} mentor and coach others in order to strengthen the CSE Department and TAMU, act with integrity under all circumstances, and model work/life balance.
+\item \emph{develop new talent:} help attract, retain, and motivate a diverse set of students with talent and skills necessary to learn and advance the cutting edge research in computer science;
+\item \emph{motivate the team:} support my students and research team in setting and meeting high academic objectives;
+\item \emph{model personal excellence:} mentor and coach others in order to strengthen the CSE Department and TAMU, act with integrity under all circumstances, and model work/life balance.
 \end{enumerate}
 
 

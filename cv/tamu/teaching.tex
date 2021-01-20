@@ -1,5 +1,92 @@
-\documentclass[11pt]{article}
+%!TEX TS-program = multibib
+\documentclass[10pt,letterpaper]{moderncv/moderncv}
+\usepackage{wrapfig}
+
+%----------------------------------------------------------------------------------
+% moderncv Setup
+%----------------------------------------------------------------------------------
+\moderncvstyle{classic}                      % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{purple}                         % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage[utf8]{inputenc}                  % replace by the encoding you are using
+%\renewcommand{\familydefault}{\sfdefault}   % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%----------------------------------------------------------------------------------
+% Geometry and margins.
+%----------------------------------------------------------------------------------
+\usepackage[scale=0.8,top=1in,bottom=.75in]{geometry}
+\setlength{\hintscolumnwidth}{2.8cm}                         % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, - to change width of name placeholder (to leave more space for your address details)
+\AtBeginDocument{\recomputelengths}                      % required when changes are made to page layout lengths
+
+%----------------------------------------------------------------------------------
+% Set up hyperref custom link colors.
+%----------------------------------------------------------------------------------
+%\usepackage{hyperref}
+\usepackage{xcolor}                          % Use xcolor so I can steal colors from moderncv
+\colorlet{mylinkcolor}{color1!80!black}      % Links are slightly darker than color1
+%\hypersetup{
+%    colorlinks=true,%
+%    citecolor=black,%
+%    filecolor=black,%
+%    linkcolor=mylinkcolor,%
+%    urlcolor=mylinkcolor,%
+%    pdfborder=0 0 0%
+%}
+\urlstyle{sf}    % Make URLs match rest of text.
+
+%----------------------------------------------------------------------------------
+% Personal data.
+%----------------------------------------------------------------------------------
+\firstname{Olga}
+\familyname{Pearce}
+%\title{Resum\u00E9 title (optional)}                       % optional
+
+%%%%%%%%% LLNL address
+\address{Lawrence Livermore National Laboratory}{Livermore, CA, 94550}    % optional
+%\phone{925.422.0436}                                   % optional
+%\fax{fax (optional)}                                  % optional
+\email{olga@llnl.gov}                             % optional
+\extrainfo{\href{http://people.llnl.gov/olga}{\url{http://people.llnl.gov/olga}}}
+
+%%%%%%%%%%%% TAMU address
+%\address{Parasol Lab, Dept. of Computer Science and Engineering\\Texas A\&M University,}{College Station, TX 77843-3112}
+%%\phone{925.422.0436}                                   % optional
+%%\fax{fax (optional)}                                  % optional
+%\email{olga@cs.tamu.edu}                             % optional
+%\extrainfo{\href{http://parasol.tamu.edu/people/olga}{\url{http://parasol.tamu.edu/people/olga}}}
+%%%%\quote{Some quote (optional)}                         % optional
+%%%%\photo[64pt]{picture}                                 % optional, '64pt' is the height the picture must be resized to and
+%                                                       %'picture' is the name of the picture file
+
+%----------------------------------------------------------------------------------
+% Custom commands.
+%----------------------------------------------------------------------------------
+% command and color used in this document, independently from moderncv
+\definecolor{see}{rgb}{0.5,0.5,0.5}% for web links
+\newcommand{\see}[1]{\hfill{\itshape\color{see}\footnotesize{}see #1}}
+
+%----------------------------------------------------------------------------------
+% Bibliography Customizations.
+%----------------------------------------------------------------------------------
+% Put labels next to best posters, based on bibliography order.
+% NOTE: this is a little nasty; numbers need to be updated every time the pubs change.
+\makeatletter
+\renewcommand{\bibliographyitemlabel}{
+    \ifthenelse{\value{enumiv}=160\or%
+                \value{enumiv}=150}{\color{color1}\textbf{Best Poster} \color{black}}{}
+    {\@biblabel{\arabic{enumiv}}}%
+}
+\makeatother
+
 \begin{document}
+
+\recipient{\large Teaching Statement}{Olga Pearce, Ph.D.}
+\date{January 20, 2021}
+\opening{}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle%\justifying
+\vspace{-.75cm}
 
 My most effective professors had practical experience in the subjects they taught, enabling them to design challenging and realistic projects, and facilitate and answer questions that tied together multiple subjects and practice.  From the mathematician who used numerical analysis in simulations, to the physicist who sneakily taught the basics of computer simulation in an intro to data structures course, to the computer scientist who invented a programming language to solve specific problems and stood up a language committee across industries and continents to help them solve theirs.  I believe it is paramount to maintain a collegial yet challenging classroom environment that resembles the multidisciplinary teams across the nation's finest industrial and research institutions, fully engaging the students' imagination and ability to solve problems as a team.
 
@@ -24,9 +111,9 @@ as well as projects that would expose the students to conducting modern science.
 To conclude, if I am given an opportunity to teach students at TAMU, I would:
 
 \begin{enumerate}
-\item {\bf guide research:} provide leadership and strategic vision for my students as well as the HPC research community;
-\item {\bf build relationships:} establish collaborations with leading research groups;
-\item {\bf deliver results:} produce fundamental and practical advancements in the field of HPC.
+\item \emph{guide research:} provide leadership and strategic vision for my students as well as the HPC research community;
+\item \emph{build relationships:} establish collaborations with leading research groups;
+\item \emph{deliver results:} produce fundamental and practical advancements in the field of HPC.
 \end{enumerate}
 
 
