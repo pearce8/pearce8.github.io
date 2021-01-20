@@ -58,31 +58,32 @@
 %%%%\photo[64pt]{picture}                                 % optional, '64pt' is the height the picture must be resized to and
 %                                                       %'picture' is the name of the picture file
 
-%----------------------------------------------------------------------------------
-% Custom commands.
-%----------------------------------------------------------------------------------
-% command and color used in this document, independently from moderncv
-\definecolor{see}{rgb}{0.5,0.5,0.5}% for web links
-\newcommand{\see}[1]{\hfill{\itshape\color{see}\footnotesize{}see #1}}
+\usepackage{footmisc}
+\usepackage[absolute,overlay]{textpos}
 
-%----------------------------------------------------------------------------------
-% Bibliography Customizations.
-%----------------------------------------------------------------------------------
-% Put labels next to best posters, based on bibliography order.
-% NOTE: this is a little nasty; numbers need to be updated every time the pubs change.
-\makeatletter
-\renewcommand{\bibliographyitemlabel}{
-    \ifthenelse{\value{enumiv}=160\or%
-                \value{enumiv}=150}{\color{color1}\textbf{Best Poster} \color{black}}{}
-    {\@biblabel{\arabic{enumiv}}}%
-}
 \makeatother
 
 
 
 \begin{document}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=mylinkcolor,%
+    urlcolor=mylinkcolor,%
+    pdfborder=0 0 0%
+}
 
-Dear Search Committee,
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Department of Computer Science \& Engineering}{Texas A\&M University\\College Station, TX}
+\date{January 20, 2021}
+\opening{Dear Faculty Search Committee:}
+\closing{Sincerely,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle%\justifying
+
 
 I am writing to apply to the position of Professor of Practice in the Department of Computer Science and Engineering at the Texas A\&M University.  I am currently a Computer Scientist in the Center for Applied Computer Science (CASC) at the Lawrence Livermore National University (LLNL).  Previously, I earned my Ph.D. with Dr. Nancy Amato at TAMU.
 
