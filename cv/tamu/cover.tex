@@ -1,7 +1,9 @@
 %!TEX TS-program = multibib
 \documentclass[10pt,letterpaper]{moderncv/moderncv}
 \usepackage{wrapfig}
-
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
 %----------------------------------------------------------------------------------
 % moderncv Setup
 %----------------------------------------------------------------------------------
@@ -135,7 +137,13 @@ I am particularly looking forward to advising students, especially for their cap
 
 Sincerely,
 
-\ \\
+\newfloat{figure}{htbp}{figs}
+\begin{figure}[h]
+%\centering
+\includegraphics[width=35mm]{Olga_signature.jpg}
+%\caption{A simple caption \label{overflow}}
+\end{figure}
+
 
 \textbf{Olga Pearce, Ph.D.}
 
