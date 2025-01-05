@@ -87,9 +87,9 @@ Lawrence Livermore National Laboratory (LLNL)}}                       % optional
 
 % Multiple Bibliographies and their titles.
 \usepackage{multibib}
-\usepackage{multibib}
+%\usepackage{multibib}
 %\newcites{Paper,Workshop,PhD,Poster}{Refereed Publications in Conferences and Journals, Unrefereed Publications and Technical Reports, Ph.D. Dissertation, Posters and Presentations}
-\newcites{Selected,Paper,Workshop,PhD,Poster}{Selected Refereed Publications.  * denotes students I supervised., Refereed Publications in Conferences and Journals (additional).  * denotes students I supervised., Unrefereed Publications and Technical Reports.  * denotes students I supervised., Ph.D. Dissertation, Posters and Presentations.  * denotes students I supervised.}
+\newcites{Selected,Paper,Workshop,Tutorials,PhD,Poster}{Selected Refereed Publications.  * denotes students I supervised., Refereed Publications in Conferences and Journals (additional).  * denotes students I supervised., Unrefereed Publications and Technical Reports.  * denotes students I supervised., Tutorials, Ph.D. Dissertation, Posters and Presentations.  * denotes students I supervised.}
 
 
 
@@ -103,12 +103,13 @@ Lawrence Livermore National Laboratory (LLNL)}}                       % optional
 \input{Sections/education}
 \input{Sections/awards}
 \input{Sections/research-experience}
-%\input{Sections/research-experience-2}
+\input{Sections/research-experience-2}
 \input{Sections/professional-activities}
-%\input{Sections/committees}
-\input{Sections/teaching}
-%\input{Sections/tutorials}
+%\input{Sections/teaching}
 \input{Sections/mentoring}
+\input{Sections/committees}
+\input{Sections/invited}
+\input{Sections/tutorials}
 %\input{Sections/mentoring-2}
 %%\input{Sections/university-activities}
 %%\input{Sections/professional-experience}
@@ -134,6 +135,10 @@ Lawrence Livermore National Laboratory (LLNL)}}                       % optional
 	\nociteWorkshop{*}
 	\bibliographystyleWorkshop{plain-url-inline-revchron}
 	\bibliographyWorkshop{Bibliographies/Workshops}
+
+	\nociteTutorials{*}
+	\bibliographystyleSelected{plain-url-inline-revchron}
+	\bibliographyTutorials{Bibliographies/Tutorials}
 
 %	\nociteBook{*}
 %	\bibliographystyleBook{plain-url-inline-revchron}
